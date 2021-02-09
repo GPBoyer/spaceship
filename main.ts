@@ -6,7 +6,7 @@ input.onButtonPressed(Button.AB, function () {
     shoot.change(LedSpriteProperty.Brightness, 80)
     for (let index = 0; index < 4; index++) {
         shoot.change(LedSpriteProperty.Y, -1)
-        basic.pause(150)
+        basic.pause(100)
         if (shoot.isTouching(enemy)) {
             game.addScore(1)
             enemy.delete()
@@ -27,7 +27,7 @@ basic.forever(function () {
     enemy = game.createSprite(randint(0, 4), 0)
     enemy.set(LedSpriteProperty.Brightness, 150)
     enemy.turn(Direction.Right, 90)
-    basic.pause(100)
+    basic.pause(500)
     for (let index = 0; index < 4; index++) {
         enemy.move(1)
         basic.pause(500)
